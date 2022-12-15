@@ -1,0 +1,90 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 1.25rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+.brand {
+    font-family: 'Merriweather', serif;
+    font-size: 48px;
+    text-align: center;
+    margin: 0.75rem;
+  }
+
+.calc {
+    border-radius: 10px;
+    width: 440px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%);
+    background-image: linear-gradient(rgb(169,113,184), rgb(97,105,182));
+    color: rgb(225, 225, 225);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
+    margin-bottom: 0.75rem;
+}
+
+.display {
+    height: 4.25rem;
+    text-align: right;
+    padding: 2rem 1rem 0 0;
+}
+
+.display p {
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.cur-operand {
+    color: white;
+}
+
+.prev-operand {
+    font-size: 1rem;
+    color: rgb(215, 215, 215);
+}
+
+.calc-buttons button {
+    aspect-ratio: 1;
+    color: rgb(225, 225, 225);
+    border: none;
+    background: transparent;
+}
+
+button.equals-btn {
+    background-color: rgb(61, 202, 215);
+}
+
+button.operation {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.calc-buttons {
+    display: grid;
+    padding: 1rem;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+button.double {
+    grid-column: span 2;
+    aspect-ratio: 2;
+}
+
+button:hover {
+    background-color: #ebebeb12;
+    /* border: 1px solid rgba(0, 0, 0, 0.3); */
+    cursor: pointer;
+}
+
+.operation:hover, .equals-btn:hover {
+    /* color: black; */
+    background-color: #ebebeb72;
+}
+
+@media only screen and (max-width: 440px) {
+    .calc {
+        width: 95%;
+    }
+}
